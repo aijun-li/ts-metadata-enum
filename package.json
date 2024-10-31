@@ -1,0 +1,42 @@
+{
+  "name": "ts-metadata-enum",
+  "version": "0.1.0",
+  "description": "Attach metadata to TypeScript Enum",
+  "keywords": [
+    "TypeScript",
+    "Enum",
+    "metadata"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aijun-li/ts-metadata-enum"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rslib build",
+    "check": "biome check --write",
+    "dev": "rslib build --watch",
+    "format": "biome format --write",
+    "test": "vitest --typecheck"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.3",
+    "@rslib/core": "^0.0.15",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.4"
+  }
+}
